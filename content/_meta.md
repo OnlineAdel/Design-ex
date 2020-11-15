@@ -4,5 +4,11 @@ Tagline: My portfolio.
 Social:
     - title: Link till sidans github repo.
       url: https://github.com/OnlineAdel/Design-ex
-      icon: github
+      icon: fab fa-github
+    - title: Link till min facebook.
+      url: https://www.facebook.com/A.Humadi
+      icon: fab fa-facebook
+    - title: Link till min YT-sida.
+      url: https://www.youtube.com/channel/UCcNo40Woe4XyTT8BXnpoaZA
+      icon: fab fa-youtube
 ---
