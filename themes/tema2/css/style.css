@@ -6518,6 +6518,98 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+.grid-page {
+  display: grid;
+  gap: 1em;
+  padding: 0 1em;
+}
+
+.grid-page h1 {
+  grid-column: span 3;
+  justify-self: center;
+}
+
+.kmom-box {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em;
+}
+
+.kmom-box a {
+  text-decoration: none;
+  color: #010d0f;
+}
+
+.kmom-box a:hover {
+  text-decoration: underline;
+  color: #42775c;
+}
+
+.project {
+  grid-column: span 3;
+}
+
+@media (max-width: 920px) {
+  .kmom-box {
+    grid-column: span 3;
+  }
+}
+.kmom-grid {
+  display: grid;
+  grid-column: 4;
+  margin: 0 auto;
+  gap: 1em;
+  padding: 0 1em;
+}
+
+.side-nav {
+  display: grid;
+  grid-column: 1/2;
+  border: 1px solid #000;
+  padding: 1em;
+  height: 20.5em;
+  background-color: #4b9faf;
+}
+
+.side-nav a {
+  font-weight: bold;
+  grid-column: span 1;
+  border: 1px solid #000;
+  border-radius: 20%;
+  padding: 0.5em;
+  height: 1em;
+  text-decoration: none;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+}
+
+.side-nav a:hover {
+  text-decoration: underline;
+  color: #d62f2f;
+}
+
+.report-content {
+  grid-column: 2/2;
+  border: 1px solid #000;
+  padding: 1em;
+}
+
+.report-content h1 {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .side-nav {
+    display: none;
+  }
+
+  .report-content {
+    grid-column: 1/1;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
 }
