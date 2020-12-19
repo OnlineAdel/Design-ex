@@ -26,12 +26,13 @@ h4,
 h5,
 h6 {
     font-family: 'Open Sans', sans-serif;
+    color: #B423CC;
 }
 /* Resten av min stylesheet */
 
 html {
     height: 100%;
-    background-color: #61CCAB
+    background-color: #BD3200;
 }
 
 body {
@@ -39,7 +40,8 @@ body {
     flex-direction: column;
     width: 60%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #332C23;
+    color: #B423CC;
     min-height: 100%;
 }
 
@@ -47,8 +49,8 @@ body {
 
 .site-header {
     flex: 0 0 auto;
-    background-color: #50D3D4;
-    color: #2b2e30;
+    background-color: #D40B2F;
+    color: #FAC900;
     padding: 0 2em;
 }
 
@@ -69,17 +71,17 @@ body {
 .site-footer {
     display: inline-block;
     flex: 0 0 auto;
-    background-color: #50D3D4;
-    color: #2b2e30;
+    background-color: #D40B2F;
+    color: #FAC900;
     padding: 2em;
 }
 
 .site-footer a {
-    color: #2b2e30;
+    color: #f0f0f0;
 }
 
 .site-footer a:hover {
-    color: #fff;
+    opacity: 0.8;
 }
 
 /* main navbar*/

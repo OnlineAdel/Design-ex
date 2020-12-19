@@ -6,8 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "stylelint \"**/*.scss\"",
-    "style": "sass tema2/scss/style.scss tema2/css/style.css --no-source-map",
-    "style-min": "sass tema2/scss/style.scss tema2/css/style.min.css --no-source-map --style compressed"
+    "watch": "sass tema2/scss/style.scss:tema2/css/style.css tema2/scss/style-dark.scss:tema2/css/style-dark.css --no-source-map --watch",
+    "watch-min": "sass tema2/scss/style.scss:tema2/css/style.min.css tema2/scss/style-dark.scss:tema2/css/style-dark.min.css --no-source-map --watch --style compressed",
+    "style": "npm run style-light && npm run style-dark",
+    "style-min": "npm run style-light-min && npm run style-dark-min",
+    "style-dark": "sass tema2/scss/style-dark.scss tema2/css/style-dark.css --no-source-map",
+    "style-dark-min": "sass tema2/scss/style-dark.scss tema2/css/style-dark.min.css --no-source-map --style compressed",
+    "style-light": "sass tema2/scss/style.scss tema2/css/style.css --no-source-map",
+    "style-light-min": "sass tema2/scss/style.scss tema2/css/style.min.css --no-source-map --style compressed"
   },
   "keywords": [],
   "author": "",

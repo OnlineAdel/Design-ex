@@ -18,21 +18,29 @@
     {% endif %}
 
     <!-- Insert font choice here -->
-    {# <link rel="stylesheet" href="{{ theme_url }}/../shared//css/dorid-sans.css" type="text/css" /> #}
+    {% if config.session.theme == "dark" %}
+        <link rel="stylesheet" href="{{ theme_url }}/css/style-dark.min.css" type="text/css" />
+    {% else %}
+        <link rel="stylesheet" href="{{ theme_url }}/css/style.min.css" type="text/css" />
+    {% endif %}
     <!-- End -->
-    <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
-    <link rel="stylesheet" href="{{ theme_url }}/css/nav.css" type="text/css" />
-    <link rel="stylesheet" href="{{ theme_url }}/css/image.css" type="text/css" />
-
 </head>
 <!-- "Widescreen-mode" can be activated in portfolio/config/config.yml -->
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
     <header class="site-header">
-        <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
+        <div class="theme-change">
+            {% for theme in pages["_meta"].meta.theme %}
+                <a href="{{ theme.url }}" title="{{ theme.title }}" role="button">
+                    <i class="{{ theme.icon }}" aria-hidden="true"></i>
+                    <span class="sr-only">{{ theme.title }}</span>
+                </a>
+            {% endfor %}
+        </div>
+        <a class="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
             <i class="fa fa-bars" aria-hidden="true" id="toggler"></i>
             <span class="sr-only">Toggle Menu</span>
         </a>
-        <div id="nav" role="navigation" tabindex="-1">
+        <div class="nav" role="navigation" tabindex="-1">
             <ul>
                 {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
                 <li{% if page.id == current_page.id %} class="active" {% endif %}>
@@ -51,15 +59,15 @@
     </div>
 
     <footer class="site-footer">
-      <div class="social">
-          <!-- Loads from FontAwesome (themes/shared/css/font-awesome.min.css) -->
-          {% for social in pages["_meta"].meta.social %}
-              <a href="{{ social.url }}" title="{{ social.title }}" role="button">
-                  <i class="{{ social.icon }}" aria-hidden="true"></i>
-                  <span class="sr-only">{{ social.title }}</span>
-              </a>
-          {% endfor %}
-      </div>
+        <div class="social">
+            <!-- Loads from FontAwesome (themes/shared/css/font-awesome.min.css) -->
+            {% for social in pages["_meta"].meta.social %}
+                <a href="{{ social.url }}" title="{{ social.title }}" role="button">
+                    <i class="{{ social.icon }}" aria-hidden="true"></i>
+                    <span class="sr-only">{{ social.title }}</span>
+                </a>
+            {% endfor %}
+        </div>
         <p>Min footer</p>
     </footer>
     <script src="{{ theme_url }}/../shared/js/modernizr-3.3.1-custom.min.js" type="text/javascript"></script>
