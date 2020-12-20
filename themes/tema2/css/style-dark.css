@@ -6554,6 +6554,7 @@ readers do not read off random characters that represent icons */
 .kmom-box {
   border: 1px solid rgba(0, 0, 0, 0.3);
   display: flex;
+  background-color: #b5bccf;
   flex-direction: column;
   align-items: center;
   padding: 3em;
@@ -6619,6 +6620,10 @@ readers do not read off random characters that represent icons */
   padding: 1em;
 }
 
+.report-content a {
+  color: #d68e34;
+}
+
 .report-content h1 {
   text-align: center;
 }
@@ -6643,21 +6648,13 @@ h4,
 h5,
 h6 {
   font-family: "Open Sans", sans-serif;
-  color: #B423CC;
-}
-
-p {
-  color: #B423CC;
+  color: #b423cc;
 }
 
 /* Resten av min stylesheet */
-.main {
-  background-color: #ef0;
-}
-
 html {
   height: 100%;
-  background-color: #BD3200;
+  background-color: #bd3200;
 }
 
 body {
@@ -6665,15 +6662,16 @@ body {
   flex-direction: column;
   width: 60%;
   margin: 0 auto;
-  background-color: #332C23;
+  background-color: #332c23;
+  color: #b423cc;
   min-height: 100%;
 }
 
 /* Header */
 .site-header {
   flex: 0 0 auto;
-  background-color: #4b9faf;
-  color: #D40B2F;
+  background-color: #d40b2f;
+  color: #fac900;
   padding: 0 2em;
 }
 
@@ -6692,8 +6690,8 @@ body {
 .site-footer {
   display: inline-block;
   flex: 0 0 auto;
-  background-color: #4b9faf;
-  color: #D40B2F;
+  background-color: #d40b2f;
+  color: #fac900;
   padding: 2em;
 }
 

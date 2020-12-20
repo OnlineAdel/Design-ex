@@ -6554,6 +6554,7 @@ readers do not read off random characters that represent icons */
 .kmom-box {
   border: 1px solid rgba(0, 0, 0, 0.3);
   display: flex;
+  background-color: #b5bccf;
   flex-direction: column;
   align-items: center;
   padding: 3em;
@@ -6619,6 +6620,10 @@ readers do not read off random characters that represent icons */
   padding: 1em;
 }
 
+.report-content a {
+  color: #d68e34;
+}
+
 .report-content h1 {
   text-align: center;
 }
@@ -6648,7 +6653,7 @@ h6 {
 /* Resten av min stylesheet */
 html {
   height: 100%;
-  background-color: #61CCAB;
+  background-color: #61ccab;
 }
 
 body {
@@ -6663,7 +6668,7 @@ body {
 /* Header */
 .site-header {
   flex: 0 0 auto;
-  background-color: #50D3D4;
+  background-color: #50d3d4;
   color: #2b2e30;
   padding: 0 2em;
 }
@@ -6683,7 +6688,7 @@ body {
 .site-footer {
   display: inline-block;
   flex: 0 0 auto;
-  background-color: #50D3D4;
+  background-color: #50d3d4;
   color: #2b2e30;
   padding: 2em;
 }
